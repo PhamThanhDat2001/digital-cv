@@ -1,0 +1,24 @@
+/* chỉnh sủa màn hình cho table, nhỏ hơn 768px, md */
+@media screen and (max-width:768px) {
+   
+    .nav a:nth-child(3) {
+        display: none;
+    }
+    .nav a.hide-on-mobile {
+        display: none;
+    }
+    .nav a {
+        width: 19%;
+        margin: 0;
+    }
+    /* .info{
+        height: 100%;
+        margin-top: 200px;
+    } */
+
+    .skill{
+        grid-template-columns: repeat(2,280px);
+        grid-template-rows: auto;
+    }
+  
+}

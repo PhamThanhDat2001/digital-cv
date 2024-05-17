@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* định dạng bố cục, thiết lập hệ tọa độ */
+.banner {
+    position: relative;
+    color: white;
+}
+/* chỉnh kích thước ảnh */
+.banner img {
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+/* căn chỉnh vị trí của text */
+.centered {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered2 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav img {
+    width: 120px;
+    border-radius: 100px;
+    border: 10px solid wheat;
+    z-index: 1;
+
+}
+/* css thẻ a thong class nav */
+.nav a {
+    border-left: 1px solid rgb(219, 213, 213);
+    height: 100%;
+    width: 13%;
+    /* padding: 40px 16px; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+/* để các tag con trong class nav nằm ngang và css chúng ở giữa */
+.nav {
+    display: flex;
+    height: 50px;
+    
+    border: 1px solid rgb(219, 213, 213);
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+/* css phần thông tin cá nhân */
+.info {
+    height: 280px;
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+}
+/* chỉnh màu nền cho class info1 */
+.info1 {
+    background-color: #F5F5F5;
+    
+}
+
+.info2 {
+    background-color: #F0F0F0;
+}
+/* chỉnh màu của các icon */
+i {
+    color: #199CDB;
+}
+/* lấy thẻ đầu tiên của class info */
+.info p:first-of-type {
+    margin-top: 20px;
+}
+/* lấy thẻ cuối  của class info */
+.info p:last-of-type {
+    margin-bottom: 15px;
+}
+/* tạo khoảng cách với top */
+.info p{
+ margin-top: 7px;
+}
+
+/* ---- */
+/* css layout gird đặt class skill có 3 cột và  2 hàng, khoảng cách giữa chúng  */
+.skill{
+    /* display: grid; */
+    grid-template-columns: repeat(3,280px);
+    /* grid-template-rows: 440px 300px; */
+    grid-template-rows: auto auto;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 8rem;
+}
+/* tạo borber cho các class có tên vien */
+.vien {
+    border: 1px solid rgb(219, 213, 213);
+    display: grid;
+    /* height: 500px; */
+   
+}
+/* lấy thẻ div đầu trong class vien */
+.vien div:first-of-type{
+    display: grid;
+    height: 80px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* text-align: center;
+    align-items: center; */
+    margin-bottom: 25px ;
+  
+}
+/* lấy thẻ div thứ 2 trong class vien */
+/* .vien div:nth-child(2){
+    
+    margin-bottom: 200px;
+} */
+/* lấy thẻ i của div đầu tiên là con trực tiếp của class vien  trong class vien */
+.vien > div:first-child i {
+    font-size: 30px;
+    color: #B4BBC0;
+}
+.vien p{
+    /* align-self: flex-start; */
+    margin-left: 50px;
+    /* display: grid; */
+
+}
+/* tạo dấu chấm tròn trước các tag strong */
+strong::before {
+    content: "\2022";  /* Mã Unicode cho dấu chấm tròn */
+    color: blue;       
+    margin-right: 20px;
+}
+/* chỉnh sửa icon của phần sở thích */
+.icontent{
+    font-size: 15px;
+    width: 17px;
+    /* height: 50px;     */
+    padding: 20px;
+    border: 1px solid #78C5E9;
+    border-radius: 100%;
+    text-align: center;
+}
+.level-bar {
+    width: 35px;
+    /* background-color: blue; */
+    border-radius: 5px;
+    height: 5px;
+     /* margin-bottom: 10px;     */
+    margin: 5px 10px 15px 0px;
+ 
+}
+.abc{
+    display: flex;
+}
+
+/* ------ */
+/* đặt 2 cột và 2 hàng */
+.chungchigiaithuong{
+    /* display: grid; */
+    /* grid-template-columns: 510px 510px;
+    grid-template-rows: 115px 115px; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #f7f7f7;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+}
+.chungchi {
+    flex-shrink: 0; /* Ngăn chặn phần tử từ việc thu nhỏ lại */
+}
+/* tạo thẻ ngăn cách giữa các chungchi */
+.chungchi::before {
+    content: '';
+    position: absolute;
+    top: 46%;
+    width: 45%;
+    border-top: 1px solid #d6c08d;
+}
+.chungchigiaithuong p {
+    margin-left: 20px;
+}
+/* --------------- */
+.duan{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    /* grid-template-rows: repeat(1,200px); */
+    justify-content: center;
+    gap: 30px;
+ 
+}
+/* tạo đường viền */
+.duan1, .duan2, .duan3{
+    border: 1px solid #dddddd;
+ 
+}
+.duan p{
+    text-align: center;
+    font-size: small;
+    color: white;
+    background-color: #199CDB;
+    display: inline-block;
+    padding: 4px 10px 4px 10px    ;
+    border: 1px solid #78C5E9;
+    border-radius: 30%;
+    margin-top: 3px;
+    margin-left: 20px;
+}
+div h3{
+    margin-left: 15px;
+
+}
+.duan img{
+   width: 100%;
+}
+.duan i{
+    font-size: small;
+    /* color: ; */
+}
+/* để cho các viền giứa các ô không có khoảng cách */
+table{
+    border-collapse: collapse;
+}
+/* tạo khoảng cách trong table */
+th, td{
+    border-top: 1px solid #dddddd;
+    /* border-collapse: collapse; */
+    border-bottom: 1px solid #dddddd;
+}
+
+td {
+
+    padding: 8px;
+}
+
+/* ----------- */
+/* cho các phần trong footer nằm chính giữa */
+.footer{
+    background-color: #f7f7f7;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    
+    /* text-align: center; */
+}
+.footer i{
+   margin: 20px;
+    
+    /* text-align: center; */
+}
+
+.hide {
+    display: none !important;
+}
+
+input:focus{
+    outline: 1px solid blue;
+}
+/* css nút hiển thị và ẩn khi không di chuột vào sẽ mất */
+ .viewmoreKn ,.viewmoreHd ,.viewmoreNn ,.viewmoreSt ,.viewmoreHv ,.viewmoreKyn,
+ .viewlessKn ,.viewlessHd ,.viewlessNn ,.viewlessSt ,.viewlessHv ,.viewlessKyn{
+    visibility: hidden;
+    background-color: #F6F6BA;
+    border-radius: 50%;
+    width: 120%;
+    /* margin-bottom: 15px; */
+}
+/* :hover là khi di chột và sẽ hiển thị phần tử */
+.kinhnghiem:hover .viewmoreKn{
+    visibility: unset;
+   
+}
+.hoatdong:hover .viewmoreHd{
+    visibility: unset;
+}
+.ngonngu:hover .viewmoreNn{
+    visibility: unset;
+}
+.sothich:hover .viewmoreSt{
+    visibility: unset;
+}
+.hocvan:hover .viewmoreHv{
+    visibility: unset;
+}
+.kynang:hover .viewmoreKyn{
+    visibility: unset;
+}
+
+/* ---- */
+.kinhnghiem:hover .viewlessKn{
+    visibility: unset;
+   
+}
+.hoatdong:hover .viewlessHd{
+    visibility: unset;
+}
+.ngonngu:hover .viewlessNn{
+    visibility: unset;
+}
+.sothich:hover .viewlessSt{
+    visibility: unset;
+}
+.hocvan:hover .viewlessHv{
+    visibility: unset;
+}
+.kynang:hover .viewlessKyn{
+    visibility: unset;
+}
+
